@@ -14,9 +14,9 @@ def encrypt(plain_text, shift):
     #print output: "The encoded text is mjqqt"
     cipher_text =''
     for letter in plain_text:
-        cipher_text += alphabet[alphabet.index(letter)+shift]
+        cipher_text += alphabet[(alphabet.index(letter)+shift)%26]
     
-    print(cipher_text)
+    print(f"The encoded text is {cipher_text}")
     ##HINT: How do you get the index of an item in a list:
     #https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
 
