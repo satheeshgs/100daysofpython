@@ -14,8 +14,12 @@ def caeser(text, shift, direction):
     
     print(f"The {direction}d text is {new_text}")
 
+continue_cipher = "yes"
 
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
-caeser(text, shift, direction)
+while continue_cipher == "yes":
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+    caeser(text, shift, direction)
+    continue_cipher = input("Do you want to continue. Type Yes or No\n").lower()
+    
