@@ -45,9 +45,8 @@ elif direction == "decode":
 
 #TODO-2: Call the caesar() function, passing over the 'text', 'shift' and 'direction' values.
 def caeser(text, shift, direction):
-    if direction == "encode":
-        movement = 1
-    else: 
+    movement = 1
+    if direction == "decode": 
         movement = -1
     
     new_text = ""
@@ -55,9 +54,6 @@ def caeser(text, shift, direction):
     for letter in text:
         new_text += alphabet[(alphabet.index(letter)+shift*movement)%26]
     
-    if direction == "encode":
-        print(f"The encoded text is {new_text}")
-    else: 
-        print(f"The decoded text is {new_text}")
+    print(f"The {direction}d text is {new_text}")
 
 caeser(text, shift, direction)
