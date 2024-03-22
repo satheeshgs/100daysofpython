@@ -10,7 +10,10 @@ def caeser(text, shift, direction):
     new_text = ""
     
     for letter in text:
-        new_text += alphabet[(alphabet.index(letter)+shift)%26]
+        if letter in alphabet:
+            new_text += alphabet[(alphabet.index(letter)+shift)%26]
+        else:
+            new_text += letter
     
     print(f"The {direction}d text is {new_text}")
 
