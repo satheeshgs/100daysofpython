@@ -37,7 +37,27 @@ def decrypt(cipher_text, shift_amount):
     print(f"The decoded text is {plain_text}")
 
 #TODO-5: Check if the user wanted to encrypt or decrypt the message by checking the 'direction' variable. Then call the correct function based on that 'drection' variable. You should be able to test the code to encrypt *AND* decrypt a message.
-if direction == "encode":
+"""if direction == "encode":
     encrypt(plain_text=text, shift_amount=shift)
 elif direction == "decode":
     decrypt(cipher_text=text, shift_amount=shift)
+"""
+
+#TODO-2: Call the caesar() function, passing over the 'text', 'shift' and 'direction' values.
+def caeser(text, shift, direction):
+    if direction == "encode":
+        movement = 1
+    else: 
+        movement = -1
+    
+    new_text = ""
+    
+    for letter in text:
+        new_text += alphabet[(alphabet.index(letter)+shift*movement)%26]
+    
+    if direction == "encode":
+        print(f"The encoded text is {new_text}")
+    else: 
+        print(f"The decoded text is {new_text}")
+
+caeser(text, shift, direction)
