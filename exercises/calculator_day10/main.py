@@ -28,12 +28,15 @@ operations = {
 }
 
 def calculator():
-    num1 = int(input("What is your first number?: "))
-    num2 = int(input("what is your second number?: "))
-    for symbol in operations:
-        print(symbol)
+    """This is a calculator function which takes two numbers and an operation as input 
+    output is the mathematical operation on the two numbers"""
+    print(logo)
+    num1 = float(input("What is your first number?: "))
+    num2 = float(input("what is your second number?: "))
+    #for symbol in operations:
+    #    print(symbol)
 
-    operation_reqd = input("Pick an operation from the line above: ")
+    operation_reqd = input("Pick an operation from the calculator: ")
 
     to_continue = 'y'
     while to_continue == 'y':
@@ -45,12 +48,12 @@ def calculator():
         if to_continue == 'y':
             operation_reqd = input("Pick an operation from the line above: ")
             num1 = answer
-            num2 = int(input("What's the next number?: "))
+            num2 = float(input("What's the next number?: "))
         elif to_continue == 'r':
             clearscreen()
             calculator()
         else: 
             clearscreen()
 
-print(logo)
+
 calculator()
