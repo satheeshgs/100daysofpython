@@ -1,5 +1,6 @@
 #calculator
 from clear import clearscreen
+from art import logo
 #add
 def add(n1, n2):
     return n1 + n2
@@ -51,4 +52,5 @@ def calculator():
         else: 
             clearscreen()
 
+print(logo)
 calculator()
