@@ -3,9 +3,18 @@ from art import logo
 from clear import clearscreen
 import random
 import time
-game_mode = {'h': 5, 'e': 10}
+
+def set_difficulty():
+    game_mode = {'hard': 5, 'easy': 10}
+    choice = input("Which mode do you want to play? Enter 'hard' for 5 guesses or 'easy' for 10 guesses: ")
+    number_of_guesses = game_mode[choice]
+    return number_of_guesses
 
 def guess_check(num1, num2):
+    """
+    input: Two integer numbers (number1 and number2)
+    output: output whether the number1 is too high, too low or equal with number2
+    """
     if num1 > num2:
         return "Too High"
     elif num1 < num2:
@@ -18,8 +27,7 @@ while to_continue == 'y':
     clearscreen()
     print(logo)
     time.sleep(1)
-    choice = input("Which mode do you want to play? Enter 'h' for hard mode (5 guesses) or 'e' for easy mode (10 guesses): ")
-    number_of_guesses = game_mode[choice]
+    number_of_guesses = set_difficulty()
     computer_guess = random.randint(1,100)
     
     game_over =  False
@@ -30,6 +38,8 @@ while to_continue == 'y':
         while guess_check(user_guess, computer_guess) != "Correct":
             print(guess_check(user_guess, computer_guess))
             number_of_guesses -= 1
+            if number_of_guesses == 0:
+                break
             print(f"You have {number_of_guesses} guesses left.")
             user_guess = int(input("Guess your number: "))
         
