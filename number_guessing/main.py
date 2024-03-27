@@ -37,7 +37,7 @@ while to_continue == 'y':
             print(f"Congratulations. You guessed correctly. The number is {user_guess}")
             break
         else:
-            print("You ran out of guesses.")
+            print("You ran out of guesses. You lose")
             break
 
     to_continue = input("Do you want to start a new game? Type 'y' for yes and 'n' for no: ")
