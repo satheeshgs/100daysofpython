@@ -117,7 +117,7 @@ def make_coffee():
             resources['coffee'] -= MENU[coffee_type]["ingredients"]['coffee']
             resources['water'] -= MENU[coffee_type]["ingredients"]['water']
             resources['money'] += cost
-            print(f"Here is your {coffee_type}.")
+            print(f"Here is your {coffee_type}. Enjoy!")
             print(f"Here is ${change} dollars in change")
 
 make_coffee()
