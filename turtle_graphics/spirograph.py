@@ -13,11 +13,14 @@ scene = Screen()
 scene.colormode(255)
 
 #spirograph
-for i in range(120):
-    jfk.pencolor(random_color())
-    jfk.circle(100)
-    jfk.setheading(i*3)
+def spirograph(turn_angle):
+
+    for i in range(int(360/turn_angle)):
+        jfk.pencolor(random_color())
+        jfk.circle(100)
+        jfk.setheading(i*turn_angle)
 
 
+spirograph(5)
 
 scene.exitonclick()
