@@ -9,9 +9,9 @@ def extract_colors(image, num_colors):
     color_tuples = []
     for color in colors:
         rgb = color.rgb
-        red = rgb[0]
-        green = rgb[1]
-        blue = rgb[2]
+        red = rgb.r
+        green = rgb.g
+        blue = rgb.b
         color_tuples.append((red, green, blue))
     
     return color_tuples
