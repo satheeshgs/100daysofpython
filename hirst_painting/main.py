@@ -1,4 +1,5 @@
-import colorgram
+import colorgram, random
+from turtle import Turtle, Screen
 
 def extract_colors(image, num_colors):
     """
@@ -18,4 +19,22 @@ def extract_colors(image, num_colors):
 
 hirst_colors = extract_colors('image.jpg', 15)
 
-print(hirst_colors)
+jfk = Turtle()
+scene = Screen()
+scene.colormode(255)
+jfk.up()
+jfk.setpos(-200,-200)
+jfk.dot(20, random.choice(hirst_colors))
+
+
+
+#painting start
+for i in range(10):
+    for j in range(10):
+        jfk.dot(20, random.choice(hirst_colors))
+        jfk.fd(50)
+    jfk.setpos(-200, jfk.ycor()+50)
+
+jfk.home()   
+
+scene.exitonclick()
