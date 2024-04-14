@@ -1,5 +1,6 @@
 from turtle import Turtle, Screen
 from paddle import Paddle
+from ball import Ball
 
 STARTING_POSITIONS = [(350,0), (-350,0)]
 
@@ -13,6 +14,7 @@ screen.tracer(0)
 #creating and moving the paddle
 r_paddle = Paddle(STARTING_POSITIONS[0])
 l_paddle = Paddle(STARTING_POSITIONS[1])
+ball = Ball()
 
 screen.listen()
 screen.onkey(r_paddle.go_up, "Up")
@@ -25,6 +27,7 @@ is_game_on = True
 
 while is_game_on:
     screen.update()
+    ball.move()
 
 
 
