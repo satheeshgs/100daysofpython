@@ -8,9 +8,8 @@ class Ball(Turtle):
         self.shape("circle")
         self.color("white")
         self.penup()
-        self.speed("slowest")
-        self.setheading(45)
     
     def move(self):
-        self.forward(20)
-        time.sleep(0.05)
+        new_x = self.xcor() + 10
+        new_y = self.ycor() + 10
+        self.goto(new_x, new_y)
