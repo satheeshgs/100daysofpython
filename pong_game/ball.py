@@ -8,8 +8,14 @@ class Ball(Turtle):
         self.shape("circle")
         self.color("white")
         self.penup()
+        self.setheading(-45)
     
     def move(self):
-        new_x = self.xcor() + 10
-        new_y = self.ycor() + 10
-        self.goto(new_x, new_y)
+        self.forward(10)
+    
+    def bounce(self):
+        if self.ycor() > 250:
+            self.setheading(self.heading() - 90)
+        else:
+            self.setheading(self.heading() + 90)
+
