@@ -35,14 +35,13 @@ while is_game_on:
     if ball.ycor() > 290 or ball.ycor() < -290:
         ball.bounce_y()
     
-    print(ball.distance(l_paddle))
-    
-
     #detect collision with paddles
     if (ball.distance(r_paddle) < 50 and ball.xcor() > 320) or (ball.distance(l_paddle) < 50 and ball.xcor() < -320):
         ball.bounce_x()
     
     #detect when to score players (misses from paddle)
+    if ball.xcor() > 320 and ball.distance(r_paddle) > 50:
+        print("ball out of bounds")
 
 
 
