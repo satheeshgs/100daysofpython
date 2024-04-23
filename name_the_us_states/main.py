@@ -9,14 +9,14 @@ turtle.shape(image)
 
 states_data = pd.read_csv("50_states.csv")
 all_states = states_data.state.to_list()
-
-game_is_on = True
+guessed_states = []
 
 user_score = 0
 
-while game_is_on:
+while len(guessed_states) < 50:
     user_guess = screen.textinput(title=f"{user_score}/50 correct. Guess the states", prompt="What's the state name that you are guessing?")
     user_guess = user_guess.title()
+    guessed_states.append(user_guess)
     if user_guess in all_states:
         user_guess_x = states_data.loc[states_data.state == user_guess, 'x'].iloc[0]  #find user guess x value
         user_guess_y = states_data.loc[states_data.state == user_guess, 'y'].iloc[0]  #find user guess y value
