@@ -30,12 +30,14 @@ while len(guessed_states) < 50:
         state_turtle.write(user_guess)  #display user guess in (x,y) location
 
 if user_guess == "Exit":
-    unguessed_states = []
-    for state in all_states:
-        if state not in guessed_states:
-            unguessed_states.append(state)
+    #unguessed_states = []
+    #for state in all_states:
+    #   if state not in guessed_states:
+    #       unguessed_states.append(state)
 
-    df = pd.DataFrame(unguessed_states, columns=["state"])
-    df.to_csv("unguessed_states.csv", index=False)
+    states_to_learn = [state for state in all_states if state not in guessed_states] #list comprehension for states
+
+    df = pd.DataFrame(states_to_learn, columns=["state"])
+    df.to_csv("states_to_learn.csv", index=False)
 
 turtle.mainloop()
