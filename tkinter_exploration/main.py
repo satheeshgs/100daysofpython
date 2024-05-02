@@ -12,16 +12,15 @@ my_label.pack(side="top")
 my_label.config(text="New text") #using config of the tcl commands
 
 def button_clicked():
-    print("I got clicked")
-    my_label.config(text="I got clicked")
+    to_display = input.get()
+    my_label.config(text=to_display)
 
 button = Button(text="Click me", command=button_clicked)
 button.pack()
 
 
 #entry
-input = Entry()
+input = Entry(width=10)
 input.pack()
-
 
 window.mainloop()
