@@ -3,4 +3,5 @@
 
 
 #text files
-*.txt
+/*.txt
+password_manager/data.txt
