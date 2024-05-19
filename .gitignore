@@ -4,4 +4,4 @@
 
 #text files
 /*.txt
-password_manager/data.txt
+!/password_manager/data.txt
