@@ -31,7 +31,7 @@ def generate_pwd():
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
 
-    website = website_input.get()
+    website = website_input.get().lower()
     email = email_input.get()
     password = password_input.get()
     new_data ={
