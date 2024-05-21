@@ -5,3 +5,7 @@
 #text files
 /*.txt
 /password_manager/data.txt
+
+
+#json
+/*.json
