@@ -9,3 +9,8 @@
 
 #json
 /*.json
+/Birthday Wisher program/.env
+
+#environment files
+*.env
+/*.env
