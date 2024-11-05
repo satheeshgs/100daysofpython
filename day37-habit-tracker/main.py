@@ -48,11 +48,11 @@ print(date_now)
 
 pixel_params = {
     "date": date_now,
-    "quantity": "10",
+    "quantity": "20",
 }
 
-# response = requests.post(url=pixel_post_endpoint, json=pixel_params, headers=graph_headers)
-# print(response.text)
+response = requests.post(url=pixel_post_endpoint, json=pixel_params, headers=graph_headers)
+print(response.text)
 
 
 #update request
@@ -65,7 +65,7 @@ update_params = {
 # print(response.text)
 
 #delete request
-delete_endpoint = f"{pixela_endpoint}/{username}/graphs/{graph_id}/{date_now}"
+# delete_endpoint = f"{pixela_endpoint}/{username}/graphs/{graph_id}/{date_now}"
 
 # response = requests.delete(url=delete_endpoint, headers=graph_headers)
 # print(response.text)
