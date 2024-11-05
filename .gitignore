@@ -14,3 +14,12 @@
 #environment files
 *.env
 /*.env
+day34-quizzler-app/__pycache__/data.cpython-310.pyc
+day34-quizzler-app/__pycache__/question_model.cpython-310.pyc
+day34-quizzler-app/__pycache__/quiz_brain.cpython-310.pyc
+day34-quizzler-app/__pycache__/ui.cpython-310.pyc
+day36_stocks/stock-monitoring/.DS_Store
+day39_flight_deal_tracker/.DS_Store
+day39_flight_deal_tracker/__pycache__/data_manager.cpython-310.pyc
+day39_flight_deal_tracker/__pycache__/flight_search.cpython-310.pyc
+day40_Flight_Search/.DS_Store
